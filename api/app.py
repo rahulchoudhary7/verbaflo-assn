@@ -7,7 +7,7 @@ import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 app = Flask(__name__)
-CORS(app, resources={r"/generate-resume": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/generate-resume": {"origins": "https://verbaflo-ai.vercel.app/"}})
 
 @app.route('/generate-resume', methods=['POST'])
 def generate_resume():

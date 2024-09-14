@@ -39,7 +39,7 @@ const ResumeGenerator = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/generate-resume', {
+      const response = await fetch('https://verbaflo-backend.onrender.com/generate-resume', {
         method: 'POST',
         body: formData,
       });
