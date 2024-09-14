@@ -1,0 +1,11 @@
+[builds]
+[[builds.node]]
+path = "client"
+command = "npm install && npm run build"
+
+[[builds.python]]
+path = "api"
+command = "pip install -r requirements.txt"
+
+[start]
+command = "gunicorn app:app --bind 0.0.0.0:$PORT"
