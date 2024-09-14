@@ -116,7 +116,6 @@ To contribute to the project:
 - [ ] Add multiple resume templates and styles
 - [ ] Integrate with LinkedIn API for direct profile import
 - [ ] Implement caching to optimize API calls and reduce response times
-- [ ] Add resume preview functionality before download
 - [ ] Implement error handling and comprehensive input validation
 - [ ] Create a mobile-responsive design for the frontend
 - [ ] Add support for multiple language resume generation
