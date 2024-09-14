@@ -1,0 +1,23 @@
+{
+    "services": [
+      {
+        "name": "backend",
+        "path": "./api",
+        "build": "pip install -r requirements.txt",
+        "start": "gunicorn app:app",
+        "customBuildCommand": "pip install -r requirements.txt",
+        "customStartCommand": "gunicorn app:app",
+        "watchPaths": ["api/**/*"]
+      },
+      {
+        "name": "frontend",
+        "path": "./client",
+        "build": "npm run build",
+        "start": "npm run dev",
+        "customBuildCommand": "npm run build",
+        "customStartCommand": "npm run dev",
+        "watchPaths": ["client/**/*"]
+      }
+    ]
+  }
+  
