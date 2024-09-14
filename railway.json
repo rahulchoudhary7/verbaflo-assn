@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "type": "node",
+      "name": "client",
+      "source": "client",
+      "build": "npm install && npm run build"
+    },
+    {
+      "type": "python",
+      "name": "api",
+      "source": "api",
+      "build": "pip install -r requirements.txt"
+    }
+  ],
+  "start": {
+    "command": "gunicorn app:app --bind 0.0.0.0:$PORT"
+  }
+}
