@@ -1,12 +1,20 @@
-FROM node:18 AS build
+# Use the official Node.js image from the Docker Hub
+FROM node:18
 
+# Set the working directory
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+# Copy package.json and package-lock.json
+COPY client/package.json client/package-lock.json ./
+
+# Install the Node.js dependencies
 RUN npm install
 
-COPY . ./
-RUN npm run build
+# Copy the rest of the application code into the container
+COPY client/ .
 
+# Expose port 5173 for Vite
 EXPOSE 5173
-CMD ["npm", "start"]
+
+# Command to run the Vite development server
+CMD ["npm", "run", "dev"]

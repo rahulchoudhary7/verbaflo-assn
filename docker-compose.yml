@@ -1,13 +1,18 @@
-version: '3'
+version: '3.8'
+
 services:
   frontend:
     build:
-      context: ./client
+      context: .
+      dockerfile: client/Dockerfile
     ports:
       - "5173:5173"
-  
+    depends_on:
+      - backend
+
   backend:
     build:
-      context: ./api
+      context: .
+      dockerfile: api/Dockerfile
     ports:
       - "5000:5000"
